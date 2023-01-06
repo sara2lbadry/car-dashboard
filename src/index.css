@@ -2,6 +2,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  background-color: var(--color-bg);
 }
 
 * {
@@ -16,7 +17,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1380px;
+  /* max-width: 1380px; */
 }
 
 img {
@@ -30,6 +31,8 @@ html {
 }
 
 :root {
+  --color-bg: #F5F5F5;
+
   /* PRIMARY */
   --primary-dark1: #242731;
   --primary-white1: #e0e4e7;

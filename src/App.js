@@ -12,6 +12,7 @@ function App() {
       <Sidebar />
       <BrowserRouter>
         <Routes>
+          <Route exact path="/" element={<Dashboard />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/booking" element={<Booking />} />
         </Routes>
