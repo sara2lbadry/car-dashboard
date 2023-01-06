@@ -9,13 +9,13 @@ import { BsHandbag } from "react-icons/bs";
 import { RiScissors2Line } from "react-icons/ri";
 import { CiCalendar } from "react-icons/ci";
 import { TbMessage } from "react-icons/tb";
-import {FiSettings} from "react-icons/fi"
-import {BiLogOut} from "react-icons/bi"
+import { FiSettings } from "react-icons/fi";
+import { BiLogOut } from "react-icons/bi";
 
 function Sidebar() {
   return (
     <section id="sidebar">
-      <div className="sidebar_container container">
+      <div className="sidebar_container ">
         <div className="top">
           <img src={logo} alt="logo"></img>
         </div>
@@ -23,38 +23,39 @@ function Sidebar() {
           <div className="sidebar_list">
             <ul className="list_items">
               <li className="list_item">
-                <RxDashboard /> Dashboard
+                <RxDashboard className="list_icon" /> <span> Dashboard</span>
               </li>
               <li className="list_item">
-                <HiOutlineUserCircle /> Assets
+                <HiOutlineUserCircle className="list_icon" />{" "}
+                <span> Assets</span>
               </li>
               <li className="list_item">
-                <RiCarLine /> Booking
+                <RiCarLine className="list_icon" /> <span> Booking</span>
               </li>
               <li className="list_item">
-                <BiShoppingBag /> Sell Cars
+                <BiShoppingBag className="list_icon" /> <span> Sell Cars</span>
               </li>
               <li className="list_item">
-                <BsHandbag /> Buy Cars
+                <BsHandbag className="list_icon" /> <span> Buy Cars</span>
               </li>
               <li className="list_item">
-                <RiScissors2Line /> Services
+                <RiScissors2Line className="list_icon" /> <span> Services</span>
               </li>
               <li className="list_item">
-                <CiCalendar /> Calender
+                <CiCalendar className="list_icon" /> <span> Calender</span>
               </li>
               <li className="list_item">
-                <TbMessage /> Messages
+                <TbMessage className="list_icon" /> <span> Messages</span>
               </li>
             </ul>
           </div>
           <div className="bottom">
             <ul className="list_items">
               <li className="list_item">
-                <FiSettings /> Settings
+                <FiSettings className="list_icon" /> <span> Settings</span>
               </li>
               <li className="list_item">
-                <BiLogOut /> Log out
+                <BiLogOut className="list_icon" /> <span> Log out</span>
               </li>
             </ul>
           </div>

@@ -1,4 +1,51 @@
+#sidebar {
+}
+
+.sidebar_container {
+    width: 300px;
+    height: 100vh;
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+}
+
 .top {
     width: 100px;
-    height: 35px;
+    height: 40px;
+    margin: 1.2rem;
 }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 90vh;
+    margin-left: 1.1rem;
+}
+
+
+.list_item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem;
+    color: var(--gray-dark2);
+}
+.list_item span {
+    cursor: pointer;
+}
+.list_icon{
+    color: var(--gray-dark3);
+}
+.bottom{
+    margin-bottom: 0.8rem;
+}
+.bottom li{
+    padding: 0.8rem;
+}
+
+
+
