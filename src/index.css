@@ -29,6 +29,10 @@ img {
 html {
   scroll-behavior: smooth;
 }
+.link {
+  text-decoration: none;
+  color: inherit;
+}
 
 :root {
   --color-bg: #F5F5F5;

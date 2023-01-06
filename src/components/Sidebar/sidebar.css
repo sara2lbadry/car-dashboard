@@ -45,7 +45,12 @@
 }
 .bottom li{
     padding: 0.8rem;
-}
+} 
 
+.active {
+    background-color: #F3F5F8;
+    padding: 0rem 1.2rem;
+   
+}
 
 

@@ -8,9 +8,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
+      
+      <BrowserRouter>
       <Navbar />
       <Sidebar />
-      <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Dashboard />} />
           <Route exact path="/dashboard" element={<Dashboard />} />

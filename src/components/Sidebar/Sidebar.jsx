@@ -11,8 +11,11 @@ import { CiCalendar } from "react-icons/ci";
 import { TbMessage } from "react-icons/tb";
 import { FiSettings } from "react-icons/fi";
 import { BiLogOut } from "react-icons/bi";
+import {  NavLink } from "react-router-dom";
 
 function Sidebar() {
+  // const [active, setActive] = useState("/");
+
   return (
     <section id="sidebar">
       <div className="sidebar_container ">
@@ -23,14 +26,32 @@ function Sidebar() {
           <div className="sidebar_list">
             <ul className="list_items">
               <li className="list_item">
-                <RxDashboard className="list_icon" /> <span> Dashboard</span>
+                <NavLink
+                  className="link"
+                  to="/dashboard"
+                  activeClassName="active"
+                  // onClick={() => setActive("/dashboard")}
+                  // className={active === "/dashboard" ? "active " : ""}
+                >
+                  <RxDashboard className="list_icon" />
+                  <span> Dashboard</span>
+                </NavLink>
               </li>
               <li className="list_item">
                 <HiOutlineUserCircle className="list_icon" />{" "}
                 <span> Assets</span>
               </li>
               <li className="list_item">
-                <RiCarLine className="list_icon" /> <span> Booking</span>
+                <NavLink
+                  className="link"
+                  to="/booking"
+                  activeClassName="active"
+                  // onClick={() => setActive("/booking")}
+                  // className={active === "/booking" ? "active" : ""}
+                >
+                  <RiCarLine className="list_icon" />
+                  <span> Booking</span>
+                </NavLink>
               </li>
               <li className="list_item">
                 <BiShoppingBag className="list_icon" /> <span> Sell Cars</span>
