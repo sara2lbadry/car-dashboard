@@ -6,13 +6,14 @@ import { ImDroplet } from "react-icons/im";
 import { GiStoneWheel } from "react-icons/gi";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
+import data from "../../data";
 
 function Dashboard() {
   const percentage = 35;
   const percentage2 = 40;
   const percentage3 = 10;
   const percentage4 = 25;
-
 
   return (
     <section id="dashboard">
@@ -34,7 +35,6 @@ function Dashboard() {
 
                   // Text size
                   textSize: "18px",
-                  
 
                   // Colors
                   pathColor: "#fff",
@@ -43,7 +43,6 @@ function Dashboard() {
                   backgroundColor: "#3e98c7",
                 })}
               />
-              
             </div>
           </div>
 
@@ -127,6 +126,24 @@ function Dashboard() {
               />
             </div>
           </div>
+        </div>
+        <div className="recharts_container">
+          <h2>Mile Statistics</h2>
+          <div className="recharts_text">
+            <div className="days">
+              <span>Day</span>
+              <span>Week</span>
+              <span>Month</span>
+            </div>
+            <div className="miles"><span>Miles</span></div>
+          </div>
+          <ResponsiveContainer width="100%">
+            <BarChart data={data}>
+              <XAxis dataKey="name" stroke="#094bb4" />
+              <Bar dataKey="stats" fill="#515964" barSize={30} />
+              <Tooltip wrapperClassName="tooltip__style" cursor={false} />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
     </section>

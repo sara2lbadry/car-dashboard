@@ -71,3 +71,12 @@
     stroke-dashoffset: 60px !important;
     stroke-linecap: round !important;
 }
+
+.recharts_container {
+    width: 600px;
+    height: 300px;
+    margin-left: 3rem;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 1.2rem;
+}
