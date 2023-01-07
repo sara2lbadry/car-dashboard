@@ -1,0 +1,13 @@
+#dashboard {
+    position: fixed;
+    top: 10%;
+    left: 300px;
+}
+
+.cards_container {
+    display: flex;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+    stroke-dashoffset: 60px !important;
+}
