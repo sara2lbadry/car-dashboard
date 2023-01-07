@@ -30,4 +30,35 @@ const data = [
     
  
 ];
-export default data;
+export const carStatics = [
+  {
+    name: "Sat",
+    week: 4000,
+  },
+  {
+    name: "Sun",
+    week: 3000,
+  },
+  {
+    name: "Mon",
+    week: 2000,
+  },
+  {
+    name: "Tue",
+    week: 2780,
+  },
+  {
+    name: "Wed",
+    week: 1890,
+  },
+  {
+    name: "Thu",
+    week: 2390,
+  },
+  {
+    name: "Fri",
+    week: 3490,
+  },
+];
+
+export default data ;

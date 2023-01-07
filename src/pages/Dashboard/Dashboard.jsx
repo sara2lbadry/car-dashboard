@@ -6,8 +6,14 @@ import { ImDroplet } from "react-icons/im";
 import { GiStoneWheel } from "react-icons/gi";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
+import {  Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis } from "recharts";
 import data from "../../data";
+import {
+  AreaChart,
+  Area,
+} from "recharts";
+import {carStatics} from "../../data"
+
 
 function Dashboard() {
   const percentage = 35;
@@ -128,22 +134,60 @@ function Dashboard() {
           </div>
         </div>
         <div className="recharts_container">
-          <h2>Mile Statistics</h2>
+          <div>
+          <h3>Mile Statistics</h3>
           <div className="recharts_text">
             <div className="days">
               <span>Day</span>
               <span>Week</span>
               <span>Month</span>
             </div>
-            <div className="miles"><span>Miles</span></div>
+            <div className="miles"><span>256 Miles</span></div>
           </div>
           <ResponsiveContainer width="100%">
             <BarChart data={data}>
-              <XAxis dataKey="name" stroke="#094bb4" />
-              <Bar dataKey="stats" fill="#515964" barSize={30} />
-              <Tooltip wrapperClassName="tooltip__style" cursor={false} />
+              <XAxis dataKey="name" stroke="#808191" fill="#F4F5F9" />
+              <Bar dataKey="stats" fill="#0e1a4a" barSize={30} />
+              <Tooltip cursor={{fill: 'transparent'}}  />
             </BarChart>
           </ResponsiveContainer>
+          </div>
+
+          <ResponsiveContainer width="100%">
+      <AreaChart
+        data={carStatics}
+        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+      >
+        <defs>
+          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+          </linearGradient>
+          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+          </linearGradient>
+        </defs>
+        <XAxis dataKey="name" stroke="#ddd" />
+
+        <CartesianGrid strokeDasharray="0" stroke="#b7ffe913" />
+        <Tooltip wrapperClassName="tooltip__style" cursor={false} />
+        <Area
+          type="monotone"
+          dataKey="week"
+          stroke="#8884d8"
+          fillOpacity={1}
+          fill="url(#colorUv)"
+        />
+        <Area
+          type="monotone"
+          dataKey="prevWeek"
+          stroke="#82ca9d"
+          fillOpacity={1}
+          fill="url(#colorPv)"
+        />
+      </AreaChart>
+    </ResponsiveContainer>
         </div>
       </div>
     </section>

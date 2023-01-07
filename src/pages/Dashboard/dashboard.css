@@ -79,4 +79,35 @@
     background-color: var(--color-white);
     padding: 2rem;
     border-radius: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
 }
+
+.recharts_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--gray-dark2);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+.days {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+.days span {
+    padding: 0.3rem 0.8rem;
+
+}
+.days span:nth-child(1) {
+    border-radius: 0.8rem;
+    background-color: var(--secondary-blue);
+    color: var(--color-white);
+
+}
+
+.miles {
+    font-size: 1rem;
+} 
