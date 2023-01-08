@@ -9,7 +9,7 @@ import { BiDollar } from "react-icons/bi";
 function Booking() {
   return (
     <section id="booking">
-      <div className="booking_container contanier">
+      <div className="booking_container container">
         <h2>Booking</h2>
         <div className="cars_container">
           {carsModels.map(
@@ -21,19 +21,19 @@ function Booking() {
                       <h3>{carName}</h3>
                       <AiOutlineHeart />
                     </div>
-                    <span>{amount}</span>
-                    <img src={img} />
+                    <span style={{color: `var(--gray-dark6)`}}>{amount}</span>
+                    <img className="carImg" src={img} />
                     <div className="car_info">
                       <div className="info">
-                        <AiOutlineUser />
+                        <AiOutlineUser style={{color: `var(--primary-purple)`, marginRight: "0.2rem"}} />
                         <span>{people}</span>
-                        <RiRepeatLine />
+                        <RiRepeatLine style={{color: `var(--primary-purple)`, marginRight: "0.2rem"}}/>
                         <span>{type}</span>
                       </div>
                       <div className="money">
                         <BiDollar />
                         <span>{money}</span>
-                        <span>/d</span>
+                        <span style={{color: `var(--gray-dark3)`}}>/d</span>
                       </div>
                     </div>
                   </div>

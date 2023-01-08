@@ -1,9 +1,9 @@
-import car1 from "./assets/car1.png"
-import car2 from "./assets/car2.png"
-import car3 from "./assets/car3.png"
-import car4 from "./assets/car4.png"
-import car5 from "./assets/car5.png"
-import car6 from "./assets/car6.png"
+import car1 from "./assets/car.svg"
+import car2 from "./assets/car2.svg"
+import car3 from "./assets/car3.svg"
+import car4 from "./assets/car4.svg"
+import car5 from "./assets/car5.svg"
+import car6 from "./assets/car6.svg"
 
 
 const data = [
@@ -73,7 +73,7 @@ export const carsModels = [
   {
     id: 1,
     carName: "Porshe 718 Cayman S",
-    carName : "Coupe",
+    amount : "Coupe",
     img: car1,
     people: 4,
     type: "Manual",

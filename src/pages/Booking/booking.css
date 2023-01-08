@@ -1,8 +1,61 @@
 #booking {
-    position: fixed;
-    top: 10%;
-    left: 300px;
-    bottom: 0;
-    right: 0;
-    overflow-y: auto;
+  position: fixed;
+  top: 10%;
+  left: 300px;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+}
+
+.cars_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carCard {
+  background-color: var(--color-white);
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.car_title {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-dark1);
+}
+
+.carImg {
+  margin-top: 0.8rem;
+  padding: 1.2rem 2rem;
+}
+
+.car_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info span {
+  padding-right: 1.2rem;
+  color: var(--gray-dark3);
+}
+
+.money {
+  display: flex;
+  align-items: center;
+}
+
+.money span {
+    color: var(--primary-dark1);
+    font-weight: 500;
 }

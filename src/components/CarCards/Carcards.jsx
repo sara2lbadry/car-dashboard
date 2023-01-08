@@ -2,7 +2,7 @@ import React from "react";
 import "./carcards.css";
 import { MdOutlineLoop } from "react-icons/md";
 import car1 from "../../assets/car1.svg";
-import car2 from "../../assets/car2.svg";
+import car2 from "../../assets/carr.svg";
 import car3 from "../../assets/car3.svg";
 import { AiOutlineSetting } from "react-icons/ai";
 import { RiRepeatFill } from "react-icons/ri";
