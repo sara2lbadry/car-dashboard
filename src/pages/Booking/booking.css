@@ -6,6 +6,46 @@
   right: 0;
   overflow-y: auto;
 }
+.booking_container h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--primary-dark1);
+}
+.sort_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.sort_text {
+  display: flex;
+  gap: 1.4rem;
+}
+.sort {
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--gray-dark2);
+}
+.sort_grid {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.grid1 {
+  padding: 0.6rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  color: var(--gray-dark4);
+  font-size: 2.5rem;
+}
+.row1 {
+  padding: 0.6rem;
+  background-color: var(--primary-purple);
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 2.5rem;
+}
 
 .cars_container {
   display: grid;
@@ -56,6 +96,6 @@
 }
 
 .money span {
-    color: var(--primary-dark1);
-    font-weight: 500;
+  color: var(--primary-dark1);
+  font-weight: 500;
 }

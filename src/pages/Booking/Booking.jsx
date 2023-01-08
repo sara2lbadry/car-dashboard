@@ -5,7 +5,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiRepeatLine } from "react-icons/ri";
 import { BiDollar } from "react-icons/bi";
-import { RxDashboard } from "react-icons/rx";
+import { MdOutlineDashboard } from "react-icons/md";
 import { TbArrowsLeftRight } from "react-icons/tb";
 
 function Booking() {
@@ -15,16 +15,16 @@ function Booking() {
         <h2>Booking</h2>
         <div className="sort_container">
           <div className="sort_text">
-            <select name="new">
-              <option>New</option>
+            <select className="sort" name="new">
+              <option >New</option>
             </select>
-            <select name="Toyota">
+            <select className="sort" name="Toyota">
               <option>Toyota</option>
             </select>
           </div>
           <div className="sort_grid">
-            <RxDashboard />
-            <TbArrowsLeftRight />
+            <MdOutlineDashboard className="grid1" />
+            <TbArrowsLeftRight className="row1" />
           </div>
         </div>
 
