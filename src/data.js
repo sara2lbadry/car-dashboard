@@ -32,7 +32,7 @@ const data = [
         stats: 2000,
       },
       {
-        name: "Fri",
+        name: "7 Pm",
         stats: 4000,
       },
     
@@ -40,32 +40,36 @@ const data = [
 ];
 export const carStatics = [
   {
-    name: "Sat",
-    week: 4000,
-  },
-  {
-    name: "Sun",
-    week: 3000,
-  },
-  {
-    name: "Mon",
+    name: "7 am",
     week: 2000,
   },
   {
-    name: "Tue",
+    name: "9 am",
+    week: 3000,
+  },
+  {
+    name: "11 am",
+    week: 2000,
+  },
+  {
+    name: "1 pm",
     week: 2780,
   },
   {
-    name: "Wed",
-    week: 1890,
+    name: "3 pm",
+    week: 1000,
   },
   {
-    name: "Thu",
+    name: "5 pm",
     week: 2390,
   },
   {
-    name: "Fri",
+    name: "7 pm",
     week: 3490,
+  },
+  {
+    name: "p pm",
+    week: 2500,
   },
 ];
 

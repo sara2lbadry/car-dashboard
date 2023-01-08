@@ -124,8 +124,33 @@
     left: 0;
 }
 
+.bar:hover {
+    fill: var(--secondary-blue);
+    transition: all 300 ease-in;
+}
+
 .chart_sec {
     border-radius: 1.2rem;
     background-color: var(--color-white);
     padding: 2rem;
+}
+.custom-tooltip {
+    background-color: #282B32;
+    color: var(--color-white);
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+}
+.custom-tooltip .value {
+    display: flex;
+    align-items: center;
+}
+.custom-tooltip .value::before {
+    content: "";
+    display: inline-block;
+    margin-right: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background-color: var(--secondary-blue);
 }

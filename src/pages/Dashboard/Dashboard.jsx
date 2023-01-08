@@ -19,13 +19,26 @@ import { AreaChart, Area } from "recharts";
 import { carStatics } from "../../data";
 import Carcards from "../../components/CarCards/Carcards";
 
-
 function Dashboard() {
   const percentage = 35;
   const percentage2 = 40;
   const percentage3 = 10;
   const percentage4 = 25;
+  const formatter = (value) => {
+    return [value, ""];
+  };
+  const CustomizedTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{label}</p>
+          <p className="value">{payload[0].value}</p>
+        </div>
+      );
+    }
 
+    return null;
+  };
   return (
     <section id="dashboard">
       <div className="dashboard_conatiner container">
@@ -155,21 +168,32 @@ function Dashboard() {
               <ResponsiveContainer className="resChart">
                 <BarChart data={data} width={150} height={40}>
                   <XAxis dataKey="name" stroke="#808191" fill="#F4F5F9" />
-                  <Bar dataKey="stats" fill="#0e1a4a" />
-                  <Tooltip cursor={{ fill: "transparent" }} />
+                  <Bar
+                    dataKey="stats"
+                    color="#000"
+                    fill="#F4F5F9"
+                    barSize={30}
+                    className="bar"
+                  />
+                  <Tooltip
+                    formatter={formatter}
+                    separator=""
+                    content={<CustomizedTooltip />}
+                    cursor={{ fill: "transparent" }}
+                  />
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
 
           <div className="chart_sec">
-          <h3>Car Statistics</h3>
+            <h3>Car Statistics</h3>
             <div className="recharts_text">
               <div className="miles">
                 <span>20 February 2022</span>
               </div>
               <div className="days">
-                <span style={{backgroundColor: "#FF764C"}}>Day</span>
+                <span style={{ backgroundColor: "#FF764C" }}>Day</span>
                 <span>Week</span>
                 <span>Month</span>
               </div>
@@ -182,22 +206,22 @@ function Dashboard() {
                 >
                   <defs>
                     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#FF764C" stopOpacity={0.8} />
-                      <stop offset="95%" stopColor="#FF764C" stopOpacity={0} />
+                      <stop offset="5%" stopColor="#FFDDBE" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#eeeceb" stopOpacity={0} />
                     </linearGradient>
                     <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                      <stop offset="5%" stopColor="#808191" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#808191" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <XAxis dataKey="name" stroke="#ddd" />
+                  <XAxis dataKey="name" stroke="#808191" />
 
-                  <CartesianGrid strokeDasharray="0" stroke="#b7ffe913" />
+                  <CartesianGrid strokeDasharray="0" stroke="#c1911913" />
                   <Tooltip wrapperClassName="tooltip__style" cursor={false} />
                   <Area
                     type="monotone"
                     dataKey="week"
-                    stroke="#FF764C"
+                    stroke="#ff764c"
                     fillOpacity={1}
                     fill="url(#colorUv)"
                   />
@@ -214,8 +238,6 @@ function Dashboard() {
           </div>
         </div>
         <Carcards />
-
-       
       </div>
     </section>
   );
