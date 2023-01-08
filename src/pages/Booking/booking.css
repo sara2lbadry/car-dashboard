@@ -1,0 +1,8 @@
+#booking {
+    position: fixed;
+    top: 10%;
+    left: 300px;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+}

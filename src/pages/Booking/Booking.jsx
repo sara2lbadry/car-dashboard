@@ -3,7 +3,11 @@ import './booking.css'
 
 function Booking() {
   return (
-    <div>Booking</div>
+    <section id='booking'>
+      <div className="booking_container contanier">
+        Booking
+      </div>
+    </section>
   )
 }
 
