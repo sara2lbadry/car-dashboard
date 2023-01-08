@@ -3,8 +3,11 @@
 ### Screenshots
 
 ![](/src/assets/dash22.png)
+
 ![](/src/assets/dash33.png)
+
 ![](/src/assets/dash44.png)
+
 ![](/src/assets/dash11.png)
 
 
@@ -17,7 +20,7 @@
 - Flexbox
 - CSS Grid
 - [React](https://reactjs.org/) - JS library
-- [React Icons](https://react-icons.github.io/react-icon/) - React library for icons
+- [React Icons](https://react-icons.github.io/react-icons) - React library for icons
 - [Recharts](https://recharts.org/en-US) - For Charts
 
 ### Links
