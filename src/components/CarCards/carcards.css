@@ -1,0 +1,51 @@
+.cars_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+.car_card {
+    border-radius: 0.8rem;
+    padding: 1.2rem 2rem;
+}
+
+
+.car_text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0;
+}
+.car_text:nth-child(1) {
+    color: var(--gray-dark3);
+    font-size: 1.4rem;
+}
+.car_text h3{
+    color: var(--primary-dark1);
+    font-size: 1.1rem;
+}
+.car_card h2{
+    color: var(--gray-dark);
+    font-size: 1.4rem;
+}
+
+.car_stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+    color: var(--gray-dark3);
+}
+.carS{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+.carH {
+    display: flex;
+    align-items: center;
+}
+.Ricon {
+    margin-right: 0.4rem;
+    
+}
