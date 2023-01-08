@@ -17,6 +17,8 @@ import {
 import data from "../../data";
 import { AreaChart, Area } from "recharts";
 import { carStatics } from "../../data";
+import Carcards from "../../components/CarCards/Carcards";
+
 
 function Dashboard() {
   const percentage = 35;
@@ -211,6 +213,9 @@ function Dashboard() {
             </div>
           </div>
         </div>
+        <Carcards />
+
+       
       </div>
     </section>
   );
