@@ -6,14 +6,17 @@ import { ImDroplet } from "react-icons/im";
 import { GiStoneWheel } from "react-icons/gi";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import {  Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis } from "recharts";
-import data from "../../data";
 import {
-  AreaChart,
-  Area,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
 } from "recharts";
-import {carStatics} from "../../data"
-
+import data from "../../data";
+import { AreaChart, Area } from "recharts";
+import { carStatics } from "../../data";
 
 function Dashboard() {
   const percentage = 35;
@@ -23,7 +26,7 @@ function Dashboard() {
 
   return (
     <section id="dashboard">
-      <div className="dashboard_conatiner">
+      <div className="dashboard_conatiner container">
         <div className="cards_container">
           <div className="card-1 card">
             <div className="card_text">
@@ -134,60 +137,79 @@ function Dashboard() {
           </div>
         </div>
         <div className="recharts_container">
-          <div>
-          <h3>Mile Statistics</h3>
-          <div className="recharts_text">
-            <div className="days">
-              <span>Day</span>
-              <span>Week</span>
-              <span>Month</span>
+          <div className="chart_sec">
+            <h3>Mile Statistics</h3>
+            <div className="recharts_text">
+              <div className="days">
+                <span>Day</span>
+                <span>Week</span>
+                <span>Month</span>
+              </div>
+              <div className="miles">
+                <span>256 Miles</span>
+              </div>
             </div>
-            <div className="miles"><span>256 Miles</span></div>
-          </div>
-          <ResponsiveContainer width="100%">
-            <BarChart data={data}>
-              <XAxis dataKey="name" stroke="#808191" fill="#F4F5F9" />
-              <Bar dataKey="stats" fill="#0e1a4a" barSize={30} />
-              <Tooltip cursor={{fill: 'transparent'}}  />
-            </BarChart>
-          </ResponsiveContainer>
+            <div className="chartContainer">
+              <ResponsiveContainer className="resChart">
+                <BarChart data={data} width={150} height={40}>
+                  <XAxis dataKey="name" stroke="#808191" fill="#F4F5F9" />
+                  <Bar dataKey="stats" fill="#0e1a4a" />
+                  <Tooltip cursor={{ fill: "transparent" }} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
 
-          <ResponsiveContainer width="100%">
-      <AreaChart
-        data={carStatics}
-        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-      >
-        <defs>
-          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-          </linearGradient>
-          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-          </linearGradient>
-        </defs>
-        <XAxis dataKey="name" stroke="#ddd" />
+          <div className="chart_sec">
+          <h3>Car Statistics</h3>
+            <div className="recharts_text">
+              <div className="miles">
+                <span>20 February 2022</span>
+              </div>
+              <div className="days">
+                <span style={{backgroundColor: "#FF764C"}}>Day</span>
+                <span>Week</span>
+                <span>Month</span>
+              </div>
+            </div>
+            <div className="chartContainer">
+              <ResponsiveContainer className="resChart" width="100%">
+                <AreaChart
+                  data={carStatics}
+                  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+                >
+                  <defs>
+                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#FF764C" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#FF764C" stopOpacity={0} />
+                    </linearGradient>
+                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <XAxis dataKey="name" stroke="#ddd" />
 
-        <CartesianGrid strokeDasharray="0" stroke="#b7ffe913" />
-        <Tooltip wrapperClassName="tooltip__style" cursor={false} />
-        <Area
-          type="monotone"
-          dataKey="week"
-          stroke="#8884d8"
-          fillOpacity={1}
-          fill="url(#colorUv)"
-        />
-        <Area
-          type="monotone"
-          dataKey="prevWeek"
-          stroke="#82ca9d"
-          fillOpacity={1}
-          fill="url(#colorPv)"
-        />
-      </AreaChart>
-    </ResponsiveContainer>
+                  <CartesianGrid strokeDasharray="0" stroke="#b7ffe913" />
+                  <Tooltip wrapperClassName="tooltip__style" cursor={false} />
+                  <Area
+                    type="monotone"
+                    dataKey="week"
+                    stroke="#FF764C"
+                    fillOpacity={1}
+                    fill="url(#colorUv)"
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="prevWeek"
+                    stroke="#82ca9d"
+                    fillOpacity={1}
+                    fill="url(#colorPv)"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
         </div>
       </div>
     </section>
