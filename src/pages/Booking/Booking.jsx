@@ -5,12 +5,29 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiRepeatLine } from "react-icons/ri";
 import { BiDollar } from "react-icons/bi";
+import { RxDashboard } from "react-icons/rx";
+import { TbArrowsLeftRight } from "react-icons/tb";
 
 function Booking() {
   return (
     <section id="booking">
       <div className="booking_container container">
         <h2>Booking</h2>
+        <div className="sort_container">
+          <div className="sort_text">
+            <select name="new">
+              <option>New</option>
+            </select>
+            <select name="Toyota">
+              <option>Toyota</option>
+            </select>
+          </div>
+          <div className="sort_grid">
+            <RxDashboard />
+            <TbArrowsLeftRight />
+          </div>
+        </div>
+
         <div className="cars_container">
           {carsModels.map(
             ({ id, carName, amount, img, people, type, money }) => {
@@ -21,19 +38,29 @@ function Booking() {
                       <h3>{carName}</h3>
                       <AiOutlineHeart />
                     </div>
-                    <span style={{color: `var(--gray-dark6)`}}>{amount}</span>
+                    <span style={{ color: `var(--gray-dark6)` }}>{amount}</span>
                     <img className="carImg" src={img} />
                     <div className="car_info">
                       <div className="info">
-                        <AiOutlineUser style={{color: `var(--primary-purple)`, marginRight: "0.2rem"}} />
+                        <AiOutlineUser
+                          style={{
+                            color: `var(--primary-purple)`,
+                            marginRight: "0.2rem",
+                          }}
+                        />
                         <span>{people}</span>
-                        <RiRepeatLine style={{color: `var(--primary-purple)`, marginRight: "0.2rem"}}/>
+                        <RiRepeatLine
+                          style={{
+                            color: `var(--primary-purple)`,
+                            marginRight: "0.2rem",
+                          }}
+                        />
                         <span>{type}</span>
                       </div>
                       <div className="money">
                         <BiDollar />
                         <span>{money}</span>
-                        <span style={{color: `var(--gray-dark3)`}}>/d</span>
+                        <span style={{ color: `var(--gray-dark3)` }}>/d</span>
                       </div>
                     </div>
                   </div>
