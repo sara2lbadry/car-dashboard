@@ -4,6 +4,9 @@ import car3 from "./assets/car3.svg"
 import car4 from "./assets/car4.svg"
 import car5 from "./assets/car5.svg"
 import car6 from "./assets/car6.svg"
+import carCard1 from "./assets/car1.svg";
+import carCard2 from "./assets/carr.svg";
+import carCard3 from "./assets/car3.svg";
 
 
 const data = [
@@ -162,6 +165,39 @@ export const carsModels = [
     people: 4,
     type: "Manual",
     money: 400,
+
+  },
+]
+
+export const carCards = [
+  {
+    id: 1,
+    title: "64% Recommend",
+    img: carCard1,
+    backgroundColor: "#e1dfa4",
+    type: "Mini Cooper",
+    rate: "132K",
+    money: "32/h",
+
+  },
+  {
+    id: 2,
+    title: "74% Recommend",
+    img: carCard2,
+    backgroundColor: "#e3ecf1",
+    type: "Porsche 911 Carrera",
+    rate: "130K",
+    money: "28/h",
+
+  },
+  {
+    id: 3,
+    title: "74% Recommend",
+    img: carCard3,
+    backgroundColor: "#f9f0f1",
+    type: "Porsche 911 Carrera",
+    rate: "130K",
+    money: "28/h",
 
   },
 ]
